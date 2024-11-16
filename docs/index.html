@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>SuperKanban</title>
+</head>
+
+<body>
+    <header>
+        SuperKanban - Organize sua criação de conteúdo aqui
+    </header>
+
+    <nav> </nav>
+
+    <div id="quadro" class="quadro">
+        <div class="coluna" id="ideias" data-column="1" ondrop="drop_handler(event)" ondragover="dragover_handler(event)">
+            <div class="column-header-group">
+                <p>Ideias</p> <button class="btnMais" onclick="fModalCriar(1)">+</button>
+            </div>
+            <div class="body"></div>
+        </div>
+        <div class="coluna" id="producao" data-column="2" ondrop="drop_handler(event)" ondragover="dragover_handler(event)">
+            <div class="column-header-group">
+                <p>Produção</p> <button class="btnMais" onclick="fModalCriar(2)">+</button>
+            </div>
+            <div class="body"></div>
+        </div>
+        <div class="coluna" id="publicados" data-column="3" ondrop="drop_handler(event)" ondragover="dragover_handler(event)">
+            <div class="column-header-group">
+                <p>Publicados</p> <button class="btnMais" onclick="fModalCriar(3)">+</button>
+            </div>
+            <div class="body"></div>
+        </div>
+    </div>
+
+    <div id="modal-criar">
+        <div class="box">
+            <div class="form">
+                <input type="hidden" id="idInput">
+                <div class="grupo-inputs">
+                    <fieldset>
+                        <legend id="tituloCriacao">Criar tarefa</legend>
+                        <legend id="tituloEdicao">Editar tarefa</legend>
+                        <label class="titulo-nova-tarefa">Título:</label>
+                        <input type="text" id="tituloTarefa">
+                        <br>
+                        <label class="descricao-nova-tarefa">Descrição:</label>
+                        <br>
+                        <textarea id="descricao" rows="4"></textarea>
+                        <br>
+                        <label class="prioridade-nova-tarefa">Prioridade:</label>
+                        <select class="input-prioridade" id="prioridade">
+                            <option value="Leve">Leve</option>
+                            <option value="Moderada">Moderada</option>
+                            <option value="Urgente">Urgente</option>
+                        </select>
+                        <br>
+                        <label class="labelColumn" for="column">Coluna:</label>
+                        <select id="column">
+                            <option value="1">Ideias</option>
+                            <option value="2">Produção</option>
+                            <option value="3">Publicados</option>
+                        </select>
+                        <br>
+                        <label class="prazo-nova-tarefa">Prazo:</label>
+                        <input class="input-data" type="date" id="dataVenc">
+                        <br>
+                        <label class="responsaveis-nova-tarefa">Responsáveis:</label>
+                        <br>
+                        <textarea id="responsaveis" rows="4"></textarea>
+                        <br>
+                        <button class="btnModal" type="button" onclick="fFecharModalCriar()">Cancelar</button>
+                        <button type="button" id="btnSalvarCriar" onclick="fCriarTarefa()">Salvar</button>
+                        <button type="button" id="btnSalvarEditar" onclick="fEditarTarefa()">Salvar</button>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalExcluir">
+        <div class="box">
+            <input type="hidden" id="idExcluir">
+            <h1>Deseja excluir esta tarefa?</h1>
+            <button type="button" id="btnSim" onclick="excluirTarefa(idExcluir.value)">Sim</button>
+            <button type="button" id="btnNao" onclick="fecharModalExcluir()">Não</button>
+        </div>
+    </div>
+
+    <script src="./lib/moment.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
