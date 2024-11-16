@@ -1,0 +1,304 @@
+header {
+    background-color: #C7FF5D;
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px 10px 20px 10px;
+}
+
+body {
+    background-color: rgb(179, 179, 179);
+}
+
+nav {
+    background-color: #C3EA75;
+    padding: 20px 10px 20px 10px;
+}
+
+.quadro {
+    display: flex;
+    justify-content: center;
+    min-height: 1500px;
+    gap: 10px;
+    padding: 10px;
+}
+
+.coluna {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    min-width: 100px;
+    max-width: 1024px;
+}
+
+p {
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#tituloCriacao {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#tituloEdicao {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.titulo-tarefa {
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 20px;
+}
+
+.descricao {
+    font-size: 17px;
+    padding: 5px 10px 5px 10px;
+    margin: 0px;
+}
+
+.descricao-data {
+    font-size: 17px;
+    padding: 5px 10px 5px 10px;
+    margin-bottom: 17px;
+}
+
+.descricao-info {
+    font-size: 17px;
+    padding: 5px 10px 5px 15px;
+    margin: 0px;
+}
+
+.prioridade {
+    font-size: 17px;
+    padding: 5px 10px 5px 10px;
+}
+
+.item {
+    display: flex;
+    background-color: aliceblue;
+    border-radius: 15px;
+}
+
+#modal-criar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#modalExcluir {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#modal-criar .box {
+    background-color: #F5F5F5;
+    width: 500px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#modalExcluir .box {
+    background-color: #F5F5F5;
+    width: 500px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#modalExcluir .box h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#modalExcluir .box button {
+    background-color: blue;
+    color: #FFFFFF;
+    border-radius: 5px;
+    border: none;
+    padding: 8px;
+}
+
+#btnSim {
+    margin-left: 40px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+#btnNao {
+    cursor: pointer;
+}
+
+#modalExcluir .box button:hover {
+    background-color: rgb(43, 43, 243);
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#modal-criar .box .titulo-nova-tarefa {
+    padding: 10px 20px;
+}
+
+#modal-criar .box .descricao-nova-tarefa {
+    padding: 10px 20px;
+}
+
+#modal-criar .box #descricao {
+    margin-left: 20px;
+}
+
+#modal-criar .box .prioridade-nova-tarefa {
+    padding: 10px 20px;
+}
+
+#modal-criar .box .labelColumn {
+    padding: 10px 20px;
+}
+
+#modal-criar .box .prazo-nova-tarefa {
+    padding: 10px 20px;
+}
+
+#modal-criar .box .responsaveis-nova-tarefa {
+    padding: 10px 20px;
+}
+
+#modal-criar .box #responsaveis {
+    margin-left: 20px;
+}
+
+.btnModal {
+    margin-left: 1px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#modal-criar .box button {
+    background-color: blue;
+    color: #FFFFFF;
+    border-radius: 5px;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+}
+
+#modal-criar .box button:hover {
+    background-color: rgb(43, 43, 243);
+}
+
+#modal-criar .box .input-data {
+    margin-bottom: 5px;
+    width: 175px;
+}
+
+.input-prioridade {
+    margin-bottom: 5px;
+}
+
+#column {
+    margin-bottom: 5px;
+    width: 200px;
+}
+
+#tituloTarefa {
+    margin-bottom: 5px;
+}
+
+input {
+    border: none;
+}
+
+#modal-criar .box textarea {
+    border: none;
+    width: 240px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#modal-criar .box select {
+    border: none;
+    width: 145px;
+}
+
+#editar {
+    background-color: #F0F8FF;
+    border: none;
+    margin-top: 38px;
+    margin-bottom: 32px;
+    font-size: 32px;
+}
+
+#excluir {
+    background-color: #F0F8FF;
+    border: none;
+    margin-top: 38px;
+    margin-bottom: 32px;
+    font-size: 32px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.priority-group {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.btnMais {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 340px;
+    cursor: pointer;
+}
+
+.column-header-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1280px){
+    .column-header-group .btnMais {
+        margin-left: 220px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+    #quadro {
+        flex-direction: column;
+    }
+    .item {
+        flex-direction: column;
+    }
+    .column-header-group .btnMais {
+        margin-left: 10px;
+    }
+    .column-header-group {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 490px) {
+    .card-header {
+        flex-direction: column;
+    }
+
+}
